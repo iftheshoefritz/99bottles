@@ -1,32 +1,21 @@
-# 99 Bottles
+# Fritz's talk at Prodigy based on 99 Bottles 
 
-## The Code
+## Session 1
 
-* [Chapter 1](https://github.com/sandimetz/99bottles/commits/chapter-1)
-* [Chapter 2](https://github.com/sandimetz/99bottles/commits/chapter-2)
-* [Chapter 3](https://github.com/sandimetz/99bottles/commits/chapter-3)
-* [Chapter 4](https://github.com/sandimetz/99bottles/commits/chapter-4)
-* [Chapter 5](https://github.com/sandimetz/99bottles/commits/chapter-5)
-* [Chapter 6](https://github.com/sandimetz/99bottles/commits/chapter-6)
+Checkout the code:
 
-## Installing Ruby
+    git clone git@github.com:iftheshoefritz/99bottles.git
+    git co pre-exercise
 
-### Windows
+IN THE KATA (you can start early if you want):
 
-There's an installer, it's easy.
-http://rubyinstaller.org/
 
-### Mac
+Run the tests:
 
-Newer macs ship with a usable version of Ruby.
+    > ruby test/bottles_test.rb
 
-Try `ruby -v` in a terminal window, and if it's 1.9.x or 2.x you're fine.
+Edit lib/bottles.rb to make the test pass.
 
-http://www.railstutorial.org/book/beginning#sec-install_ruby
-http://tutorials.jumpstartlab.com/topics/environment/environment.html
-http://docs.railsbridge.org/installfest/macintosh
+(whitespace is significant in the verses)
 
-### Linux
-
-Ubuntu: http://docs.railsbridge.org/installfest/linux
-https://www.ruby-lang.org/en/installation/
+As soon as you pass one test, delete the “skip” keyword from the next test and run the tests again.
