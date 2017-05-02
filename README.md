@@ -5,6 +5,7 @@
 Checkout the code:
 
     git clone git@github.com:iftheshoefritz/99bottles.git
+    cd 99bottles
     git checkout pre-exercise
 
 Make sure you can run the tests:
