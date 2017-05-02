@@ -5,14 +5,13 @@
 Checkout the code:
 
     git clone git@github.com:iftheshoefritz/99bottles.git
-    git co pre-exercise
+    git checkout pre-exercise
 
-IN THE KATA (you can start early if you want):
-
-
-Run the tests:
+Make sure you can run the tests:
 
     > ruby test/bottles_test.rb
+
+IN THE KATA: (you can start early if you want)
 
 Edit lib/bottles.rb to make the test pass.
 
