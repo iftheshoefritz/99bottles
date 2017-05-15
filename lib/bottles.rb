@@ -19,12 +19,12 @@ class Bottles
       "#{number} #{container(number)} of beer on the wall, " +
       "#{number} #{container(number)} of beer.\n" +
       "Take #{pronoun(number)} down and pass it around, " +
-      "#{quantity} bottles of beer on the wall.\n"
+      "#{quantity(number-1)} #{container(number - 1)} of beer on the wall.\n"
     else
       "#{number} #{container(number)} of beer on the wall, " +
       "#{number} #{container(number)} of beer.\n" +
       "Take #{pronoun(number)} down and pass it around, " +
-      "#{number-1} #{container(number - 1)} of beer on the wall.\n"
+      "#{quantity(number-1)} #{container(number - 1)} of beer on the wall.\n"
     end
   end
 
@@ -44,7 +44,7 @@ class Bottles
     end
   end
 
-  def quantity(n = :FIXME)
+  def quantity(n)
     if n == 0
       "no more"
     else
