@@ -14,12 +14,20 @@ class Bottles
       "#{amount(number).capitalize} #{container(number)} of beer on the wall, " +
       "#{amount(number)} #{container(number)} of beer.\n" +
       "#{action(number)}, " +
-      "#{amount(99)} #{container(number - 1)} of beer on the wall.\n"
+      "#{amount(successor(number)} #{container(number - 1)} of beer on the wall.\n"
     else
       "#{amount(number).capitalize} #{container(number)} of beer on the wall, " +
       "#{amount(number)} #{container(number)} of beer.\n" +
       "#{action(number)}, " +
-      "#{amount(number-1)} #{container(number - 1)} of beer on the wall.\n"
+      "#{amount(successor(number))} #{container(number - 1)} of beer on the wall.\n"
+    end
+  end
+
+  def successor(n)
+    if n == 0
+      99
+    else
+      n - 1
     end
   end
 
