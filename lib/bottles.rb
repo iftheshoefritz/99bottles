@@ -12,7 +12,7 @@ class Bottles
     "#{amount(number).capitalize} #{container(number)} of beer on the wall, " +
     "#{amount(number)} #{container(number)} of beer.\n" +
     "#{action(number)}, " +
-    "#{amount(successor(number))} #{container(number - 1)} of beer on the wall.\n"
+    "#{amount(successor(number))} #{container(successor(number))} of beer on the wall.\n"
   end
 
   def successor(n)
