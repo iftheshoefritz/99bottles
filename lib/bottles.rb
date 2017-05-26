@@ -14,7 +14,7 @@ class Bottles
       "#{amount(number).capitalize} #{container(number)} of beer on the wall, " +
       "#{amount(number)} #{container(number)} of beer.\n" +
       "#{action(number)}, " +
-      "#{amount(number-1)} #{container(number - 1)} of beer on the wall.\n"
+      "#{amount(99)} #{container(number - 1)} of beer on the wall.\n"
     else
       "#{amount(number).capitalize} #{container(number)} of beer on the wall, " +
       "#{amount(number)} #{container(number)} of beer.\n" +
@@ -32,13 +32,7 @@ class Bottles
   end
 
   def amount(n)
-    # THIS LOOKS LIKE IT MIGHT BE A MISTAKE:
-    # * shape of amount is now breaking similarity of all
-    # the other methods
-    # * -1 is not a concept in the 99 bottles domain
-    if n == -1
-      99.to_s
-    elsif n == 0
+    if n == 0
       "no more"
     else
       n.to_s
