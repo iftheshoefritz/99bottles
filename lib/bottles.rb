@@ -30,11 +30,6 @@ class Bottles
   def container(n)
     BottleNumber.new(n).container
   end
-
-  def pronoun(n)
-    BottleNumber.new(n).pronoun(n)
-  end
-
 end
 
 class BottleNumber
@@ -56,7 +51,7 @@ class BottleNumber
     if number == 0
       "Go to the store and buy some more"
     else
-      "Take #{pronoun(number)} down and pass it around"
+      "Take #{pronoun} down and pass it around"
     end
   end
 
@@ -76,8 +71,8 @@ class BottleNumber
     end
   end
 
-  def pronoun(n)
-    if n == 1 
+  def pronoun
+    if number == 1 
       "it"
     else
       "one"
