@@ -44,11 +44,11 @@ class BottleNumber
     @number = number
   end
 
-  def successor(n)
-    if n == 0
+  def successor(delete_me=nil)
+    if number == 0
       99
     else
-      n - 1
+      number - 1
     end
   end
 
