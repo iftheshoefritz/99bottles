@@ -20,15 +20,15 @@ class Bottles
   end
 
   def action(n)
-    BottleNumber.new(n).action(n)
+    BottleNumber.new(n).action
   end
 
   def amount(n)
-    BottleNumber.new(n).amount(n)
+    BottleNumber.new(n).amount
   end
 
   def container(n)
-    BottleNumber.new(n).container(n)
+    BottleNumber.new(n).container
   end
 
   def pronoun(n)
@@ -52,24 +52,24 @@ class BottleNumber
     end
   end
 
-  def action(n)
-    if n == 0
+  def action
+    if number == 0
       "Go to the store and buy some more"
     else
-      "Take #{pronoun(n)} down and pass it around"
+      "Take #{pronoun(number)} down and pass it around"
     end
   end
 
-  def amount(n)
-    if n == 0
+  def amount
+    if number == 0
       "no more"
     else
-      n.to_s
+      number.to_s
     end
   end
 
-  def container(n)
-    if n == 1
+  def container
+    if number == 1
       "bottle"
     else
       "bottles"
