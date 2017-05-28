@@ -16,7 +16,7 @@ class Bottles
   end
 
   def successor(n)
-    BottleNumber.new(n).successor(n)
+    BottleNumber.new(n).successor
   end
 
   def action(n)
