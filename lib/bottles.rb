@@ -17,22 +17,6 @@ class Bottles
     # Ideally would be able to use bottle_number.successor.amount
     "#{next_bottle_number.amount} #{next_bottle_number.container} of beer on the wall.\n"
   end
-
-  def successor(n)
-    BottleNumber.new(n).successor
-  end
-
-  def action(n)
-    BottleNumber.new(n).action
-  end
-
-  def amount(n)
-    BottleNumber.new(n).amount
-  end
-
-  def container(n)
-    BottleNumber.new(n).container
-  end
 end
 
 class BottleNumber
