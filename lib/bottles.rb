@@ -19,7 +19,11 @@ class Bottles
   end
 
   def bottle_number_for(number)
-    BottleNumber.new(number)
+    if number == 0
+      BottleNumber0
+    else
+      BottleNumber
+    end.new(number)
   end
 end
 
