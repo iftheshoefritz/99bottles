@@ -11,11 +11,11 @@ class Bottles
   def verse(number)
     bottle_number = BottleNumber.new(number)
     next_bottle_number = BottleNumber.new(bottle_number.successor)
-    "#{bottle_number.amount.capitalize} #{bottle_number.container} of beer on the wall, " +
-    "#{bottle_number.amount} #{bottle_number.container} of beer.\n" +
+    "#{bottle_number} of beer on the wall, ".capitalize +
+    "#{bottle_number} of beer.\n" +
     "#{bottle_number.action}, " +
-    # Ideally would be able to use bottle_number.successor.amount
-    "#{next_bottle_number.amount} #{next_bottle_number.container} of beer on the wall.\n"
+    # Ideally would be able to use bottle_number.successor
+    "#{next_bottle_number} of beer on the wall.\n"
   end
 end
 
@@ -24,6 +24,10 @@ class BottleNumber
 
   def initialize(number)
     @number = number
+  end
+
+  def to_s
+    "#{amount} #{container}"
   end
 
   def successor
